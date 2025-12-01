@@ -274,7 +274,12 @@ function toPixels(m) {
 }
 
 function storeResult() {
-	$('#results-table').append('<tr><td>'+$('#rdist').val()+'</td><td>'+$('#ddist').val()+'</td></tr>');
+    var r = $('#rdist').val();
+    var d = $('#ddist').val();
+    var q1 = $('#ch1charge').val();
+    var q2 = $('#ch2charge').val();
+    var k = $('#springk').val();
+	$('#results-table').append('<tr><td>'+r+'</td><td>'+d+'</td><td>'+q1+'</td><td>'+q2+'</td><td>'+k+'</td></tr>');
 }
 
 function updatePositions() {
@@ -362,7 +367,13 @@ function updateCh1AndSpring() {
 
         <table id="results-table">
             <thead>
-                <tr><th>r (m)</th><th>d (m)</th></tr>
+                <tr>
+                    <th>r (m)</th>
+                    <th>d (m)</th>
+                    <th>Q1 (&mu;C)</th>
+                    <th>Q2 (&mu;C)</th>
+                    <th>k (N/m)</th>
+                </tr>
             </thead>
             <tbody>
             </tbody>
@@ -374,6 +385,7 @@ function updateCh1AndSpring() {
             Original simulation by <a href="https://jasonstark.com/science/coulomb/coulomb.html">Jason Stark</a>, June 2012. <br/>
             Remixed by Zain Pirani for added features and sustainability of the project, November 2025. <br/>
             This version uses <a href="http://keith-wood.name/svg.html">jQuery SVG</a> and <a href="http://www.egrappler.com/jquery-spin-button-plugin-smart-spin/">EGrappler Smart spin</a>.<br />
+            Find the source code remixed by Zain Pirani on <a href="https://github.com/zaintechsavvy/coulombslaw">GitHub</a>.<br/>
             Released under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
             <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">
                 <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
